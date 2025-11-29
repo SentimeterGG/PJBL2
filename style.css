@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --color-primary-900: #0e1a16;
+  --color-primary-800: #1c3028;
+  --color-primary-700: #2b493d;
+  --color-primary-600: #376152;
+  --color-primary-500: #406355; /* base */
+  --color-primary-400: #568573;
+  --color-primary-300: #6ba68f;
+  --color-primary-200: #8bc2ae;
+  --color-primary-100: #aedcd0;
+  --color-primary-50: #d5f1e7;
+
+  /* === PRIMARY VARIANT === */
+  --color-primary-var-900: #103028;
+  --color-primary-var-800: #174438;
+  --color-primary-var-700: #215d4c;
+  --color-primary-var-600: #2b7760;
+  --color-primary-var-500: #54907c; /* base */
+  --color-primary-var-400: #6aab96;
+  --color-primary-var-300: #88c6b3;
+  --color-primary-var-200: #a8dcd0;
+  --color-primary-var-100: #c7ede4;
+  --color-primary-var-50: #e5faf4;
+
+  /* === SECONDARY === */
+  --color-secondary-900: #0f1a1b;
+  --color-secondary-800: #1d3032;
+  --color-secondary-700: #2b484a;
+  --color-secondary-600: #375d5f;
+  --color-secondary-500: #406063; /* base */
+  --color-secondary-400: #5a8083;
+  --color-secondary-300: #789fa2;
+  --color-secondary-200: #9dc0c3;
+  --color-secondary-100: #c5dedf;
+  --color-secondary-50: #e6f3f4;
+
+  /* === SECONDARY VARIANT === */
+  --color-secondary-var-900: #0e231d;
+  --color-secondary-var-800: #14352b;
+  --color-secondary-var-700: #1d4c3f;
+  --color-secondary-var-600: #276255;
+  --color-secondary-var-500: #2f7462; /* base */
+  --color-secondary-var-400: #499783;
+  --color-secondary-var-300: #68b59f;
+  --color-secondary-var-200: #8ed0bc;
+  --color-secondary-var-100: #b9e7d9;
+  --color-secondary-var-50: #e0f9ef;
+
+  /* === ACCENT === */
+  --color-accent-900: #0e1915;
+  --color-accent-800: #1b2e28;
+  --color-accent-700: #2a463c;
+  --color-accent-600: #355b50;
+  --color-accent-500: #406355; /* base */
+  --color-accent-400: #588675;
+  --color-accent-300: #73a492;
+  --color-accent-200: #98c4b2;
+  --color-accent-100: #c0e0d1;
+  --color-accent-50: #e2f5ea;
+
+  /* === ERROR === */
+  --color-error-900: #3d0000;
+  --color-error-800: #660000;
+  --color-error-700: #8a1111;
+  --color-error-600: #b22f2f;
+  --color-error-500: #ff5959; /* base */
+  --color-error-400: #ff7a7a;
+  --color-error-300: #ff9d9d;
+  --color-error-200: #ffc1c1;
+  --color-error-100: #ffdcdc;
+  --color-error-50: #fff0f0;
+
+  /* === NEUTRALS === */
+  --color-background-500: #f9f9f9;
+  --color-background-600: #d1d1d1;
+  --color-surface-500: #e1e1e1;
+  --color-foreground-500: #09120a;
+  --color-foreground-dark-500: #f9f9f9;
+  /* === TEXT SIZE === */
+  --text-display: 7rem;
+  --text-display--line-height: 110%;
+  --text-h1: 4.29125rem;
+  --text-h1--line-height: 120%;
+  --text-h2: 3.433125rem;
+  --text-h3: 2.746875rem;
+  --text-h4: 2.134375rem;
+  --text-h5: 1.758125rem;
+  --text-h6: 1.40625rem;
+  --text-p: 1.125rem;
+  --text-psm: 0.9rem;
+  --text-span: 0.72rem;
+  /* === FONT FAMILY === */
+  --font-heading: "Poppins", sans-serif;
+  --font-text: "Atkinson Hyperlegible", sans-serif;
+  --navbar-height: 5.125rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-text);
+  font-size: var(--text-p);
+  color: var(--color-foreground-500);
+  line-height: 150%;
+}
+a {
+  color: var(--color-accent-500);
+  font-size: var(--text-psm);
+}
+body {
+  background: var(--color-background-500);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+h1 {
+  font-size: var(--text-h1);
+}
+h2 {
+  font-size: var(--text-h2);
+}
+h3 {
+  font-size: var(--text-h3);
+}
+h4 {
+  font-size: var(--text-h4);
+}
+h5 {
+  font-size: var(--text-h5);
+}
+h6 {
+  font-size: var(--text-h6);
+}
+small {
+  font-size: var(--text-psm);
+}
+span {
+  font-size: var(--text-span);
+}
+p {
+  text-align: justify;
+}
+.nav {
+  display: flex;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  top: 0;
+  height: var(--navbar-height);
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  background: var(--color-background-500);
+  border-bottom: 1px solid var(--color-secondary-500);
+}
+nav div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.fade {
+  opacity: 0% !important;
+}
+#main-content {
+  opacity: 100%;
+  transition: opacity 0.3s ease-out;
+}
+.nav_left {
+  justify-content: start;
+}
+.nav_center {
+  justify-content: center;
+  position: relative;
+}
+.nav_right {
+  justify-content: end;
+}
+.nav_left_logo {
+  height: 100%;
+}
+a {
+  z-index: 12;
+}
+button {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-accent-500);
+  padding: 0.8rem 1.2rem;
+  border: none;
+  z-index: 12;
+  cursor: pointer;
+}
+button a,
+button {
+  cursor: pointer;
+  font-size: var(--text-psm);
+  color: var(--color-foreground-dark-500);
+  text-decoration: none;
+  z-index: 12;
+}
+section {
+  padding-inline: 4.5rem;
+  margin-bottom: 3rem;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--color-primary-800);
+  height: 100vh;
+  position: relative;
+}
+
+.cta_title {
+  font-size: var(--text-display);
+  text-align: center;
+  color: var(--color-foreground-dark-500);
+  font-weight: 600;
+  line-height: 110%;
+  margin-top: 5.125rem;
+  z-index: 2;
+}
+.cta_subtitle {
+  color: var(--color-background-500);
+}
+.cta_bg {
+  width: 90%;
+  position: absolute;
+  z-index: 1;
+  filter: opacity(20%);
+}
+.faq_question {
+  display: flex;
+  gap: 2rem;
+}
+.faq_question > div {
+  width: 50%;
+}
+footer {
+  background-color: var(--color-primary-900);
+}
+footer .two-grid {
+  padding: 4rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+footer .two-grid div {
+  width: 100%;
+}
+footer .below {
+  color: var(--color-foreground-dark-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--color-accent-500);
+  padding-block: 1.5rem;
+}
+.three-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.three-section_title * {
+  text-align: center;
+}
+.three-section_wrapper {
+  display: flex;
+}
+
+.three-section_wrapper x-card {
+  max-width: calc(100% / 3);
+}
+.three-section_wrapper h4 {
+  margin: 2rem 0px 0.8rem 0px;
+}
+.three-section_card_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  background: var(--color-surface-500);
+}
+.three-section_card_icon x-icon {
+  transform: scale(1.5);
+}
+.demonstration {
+  display: flex;
+  flex-direction: column;
+}
+.demonstration video {
+  margin-top: 3rem;
+}
+.demonstration_two-column {
+  display: flex;
+  width: 100%;
+}
+.demonstration_two-column x-card {
+  max-width: 50%;
+}
+.demonstration_card_title h4 {
+  margin-bottom: 0.5rem;
+}
+.container {
+  margin-inline: 4rem;
+}
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.login_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 23%;
+}
+.peta-indonesia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 5rem;
+  overflow: hidden;
+  height: 100vh;
+}
+.peta-indonesia svg {
+  transition: transform 0.3s ease-out;
+  transform: scale(140%);
+}
+/* Smooth transition for all island outlines */
+.peta-indonesia path {
+  stroke: var(--color-foreground-500);
+  stroke-width: 0;
+  transition: stroke-width 0.1s ease-out;
+}
+/* Hover effects for each island group */
+g[id$="Jawa (Island)"]:hover > #OUTLINE_JAWA,
+g[id$="Kalimantan (Island)"]:hover > #OUTLINE_KALIMANTAN,
+g[id$="Sumatra (Island)"]:hover > #OUTLINE_SUMATRA,
+g[id$="Sulawesi (Island)"]:hover > #OUTLINE_SULAWESI,
+g[id$="Papua (Island)"]:hover > #OUTLINE_PAPUA {
+  stroke-width: 4 !important;
+}
+g[id$="Maluku (Island)"]:hover > path {
+  stroke-width: 4 !important;
+}
+g[id$="Nusa Tenggara"]:hover > path {
+  stroke-width: 4 !important;
+}
+path[id$="Bali"]:hover {
+  stroke-width: 4 !important;
+}
+/* Add pointer cursor on hover */
+g[id$="(Island)"] {
+  cursor: pointer;
+}
+.peta-sidebar {
+  overflow-y: scroll;
+  right: 0;
+  position: absolute;
+  max-width: 35rem;
+  height: 100vh;
+  background: var(--color-background-500);
+  border: 1px solid var(--color-accent-500);
+  z-index: 2;
+  transform: translateX(100%);
+  padding-top: var(--navbar-height);
+  transition: transform 0.3s ease-out;
+}
+.peta-sidebar.active {
+  transform: translateX(0%);
+}
+.peta-sidebar_nav {
+  position: sticky;
+  top: 0;
+  background: var(--color-background-500);
+  padding: 2rem 3rem 2rem 2rem;
+  border-bottom: 1px solid var(--color-accent-500);
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.peta-sidebar_content {
+  padding: 2rem 3rem;
+}
+
+.peta-sidebar_content table {
+  width: 100%;
+}
+.peta-sidebar_content table,
+.peta-sidebar_content td,
+.peta-sidebar_content th {
+  text-align: left;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.peta-sidebar_content td,
+.peta-sidebar_content th {
+  padding-inline: 0.5rem;
+}
+.peta-sidebar x-icon {
+  width: 2rem;
+  cursor: pointer;
+}
+.suggestion-search {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  flex-direction: column;
+  width: 100%;
+  display: none;
+}
+.suggestion-search.active {
+  display: block;
+}
+
+.suggestion-search * {
+  width: 100%;
+}
+/* Responsive  */
+@media (max-width: 1024px) {
+  section {
+    padding-inline: 0rem;
+    margin-bottom: 1rem;
+  }
+  .container {
+    margin-inline: 2rem;
+  }
+}
+@media (max-width: 768px) {
+}
+edit-popup {
+  display: none;
+}
+edit-popup.active {
+  display: block !important;
+}
